@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Generar OG Image con QR</title>
+    <style>
+        body { font-family: system-ui; background: #222; color: #fff; padding: 40px; text-align: center; }
+        canvas { border: 1px solid #444; margin: 20px auto; display: block; max-width: 100%; }
+        button { background: #FFB800; color: #1A1A1A; border: none; padding: 14px 28px; font-size: 16px; font-weight: 700; border-radius: 8px; cursor: pointer; margin-top: 20px; }
+        button:hover { background: #e6a600; }
+        p { color: #aaa; margin-top: 12px; }
+    </style>
+</head>
+<body>
+    <h1>Generar og-image.png</h1>
+    <p>Imagen para compartir en WhatsApp y redes sociales con QR integrado.</p>
+    <canvas id="canvas" width="1200" height="630"></canvas>
+    <button onclick="descargar()">Descargar og-image.png</button>
+    <p id="status">Cargando...</p>
+
+    <script>
+        var canvas = document.getElementById('canvas');
+        var ctx = canvas.getContext('2d');
+
+        var qrImg = new Image();
+        qrImg.onload = function() {
+            dibujar();
+        };
+        qrImg.onerror = function() {
+            document.getElementById('status').textContent = '✗ Error: asegúrate de que QR.png esté en la misma carpeta';
+        };
+        qrImg.src = 'QR.png';
+
+        function dibujar() {
+            // Background
+            ctx.fillStyle = '#1A1A1A';
+            ctx.fillRect(0, 0, 1200, 630);
+
+            // Subtle gradient glow
+            var grad = ctx.createRadialGradient(600, 150, 0, 600, 150, 500);
+            grad.addColorStop(0, 'rgba(255, 184, 0, 0.05)');
+            grad.addColorStop(1, 'rgba(26, 26, 26, 0)');
+            ctx.fillStyle = grad;
+            ctx.fillRect(0, 0, 1200, 630);
+
+            // Gold accent line
+            ctx.fillStyle = '#FFB800';
+            roundRect(ctx, 80, 155, 50, 4, 2);
+            ctx.fill();
+
+            // Title
+            ctx.fillStyle = '#FFFFFF';
+            ctx.font = '800 54px system-ui, -apple-system, sans-serif';
+            ctx.textBaseline = 'top';
+            ctx.fillText('Inscripción de Asignaturas', 80, 180);
+
+            // Subtitle
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.6)';
+            ctx.font = '400 30px system-ui, -apple-system, sans-serif';
+            ctx.fillText('Duoc UC sede San Joaquín', 80, 250);
+
+            // Description
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.4)';
+            ctx.font = '400 20px system-ui, -apple-system, sans-serif';
+            ctx.fillText('Oferta académica · Mallas · Horarios · Opciones horarias', 80, 320);
+
+            // URL
+            ctx.fillStyle = '#FFB800';
+            ctx.font = '600 17px system-ui, -apple-system, sans-serif';
+            ctx.fillText('sanjoaquintools.github.io/inscripcionasignaturas', 80, 380);
+
+            // QR container (white rounded rect)
+            ctx.fillStyle = '#FFFFFF';
+            roundRect(ctx, 840, 120, 290, 290, 16);
+            ctx.fill();
+
+            // Draw QR image inside container
+            var qrSize = 250;
+            var qrX = 840 + (290 - qrSize) / 2;
+            var qrY = 120 + (290 - qrSize) / 2;
+            ctx.drawImage(qrImg, qrX, qrY, qrSize, qrSize);
+
+            // QR label
+            ctx.fillStyle = '#1A1A1A';
+            ctx.font = '600 13px system-ui, -apple-system, sans-serif';
+            ctx.textAlign = 'center';
+            ctx.fillText('Escanea para acceder', 985, 430);
+            ctx.textAlign = 'left';
+
+            // Bottom gold bar
+            ctx.fillStyle = '#FFB800';
+            ctx.fillRect(0, 610, 1200, 20);
+
+            // Footer
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.35)';
+            ctx.font = '400 15px system-ui, -apple-system, sans-serif';
+            ctx.fillText('Duoc UC · Sede San Joaquín · Inscripción de Asignaturas', 80, 550);
+
+            document.getElementById('status').textContent = '✓ Imagen lista para descargar';
+        }
+
+        function roundRect(ctx, x, y, w, h, r) {
+            ctx.beginPath();
+            ctx.moveTo(x + r, y);
+            ctx.lineTo(x + w - r, y);
+            ctx.quadraticCurveTo(x + w, y, x + w, y + r);
+            ctx.lineTo(x + w, y + h - r);
+            ctx.quadraticCurveTo(x + w, y + h, x + w - r, y + h);
+            ctx.lineTo(x + r, y + h);
+            ctx.quadraticCurveTo(x, y + h, x, y + h - r);
+            ctx.lineTo(x, y + r);
+            ctx.quadraticCurveTo(x, y, x + r, y);
+            ctx.closePath();
+        }
+
+        function descargar() {
+            var link = document.createElement('a');
+            link.download = 'og-image.png';
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        }
+    </script>
+</body>
+</html>

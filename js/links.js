@@ -25,7 +25,7 @@
  */
 var LINKS_CONFIG = [
   {
-    title: "Opciones horarias 2025",
+    title: "Opciones horarias 2026 - 2",
     url: "https://drive.google.com/drive/folders/1O92TBFfV6MF_jo55GvEIuVQdwPfsfVUY",
     icon: "web",
   },

@@ -1,6 +1,6 @@
-# Recursos Académicos - Duoc UC Sede San Joaquín
+# Inscripción de Asignaturas - Sede San Joaquín
 
-Página tipo Linktree con los recursos académicos de inscripción de asignaturas para estudiantes de Duoc UC sede San Joaquín.
+Página tipo Linktree con los recursos de inscripción de asignaturas para estudiantes de la sede San Joaquín.
 
 ## 🔗 URL
 
@@ -8,13 +8,11 @@ Página tipo Linktree con los recursos académicos de inscripción de asignatura
 
 ## 📋 Contenido
 
-- Oferta Académica 2026
+- Opciones horarias 2026 - 2
+- Descarga tu horario aquí
 - Mallas Curriculares
-- Descarga de horarios (Portal SICOL)
-- Opciones horarias
-- Sitio web DuocUC
-- Sede San Joaquín
-- Instagram
+- Inscribe tus asignaturas aquí
+- Sitio Web DuocUC
 
 ## ✏️ Cómo editar los enlaces
 
@@ -30,7 +28,7 @@ Edita el archivo `js/links.js`. Cada enlace se define así:
 
 ### Iconos disponibles
 
-`instagram` · `facebook` · `youtube` · `linkedin` · `tiktok` · `x` · `whatsapp` · `email` · `web` · `github`
+`instagram` · `facebook` · `youtube` · `linkedin` · `tiktok` · `x` · `whatsapp` · `email` · `web` · `github` · `horario` · `descarga` · `malla` · `inscripcion` · `carpeta`
 
 ### Para agregar un enlace
 
@@ -57,7 +55,8 @@ La página se publica automáticamente con GitHub Pages desde la rama `main`.
 ├── san-joaquin.jpg     Foto de perfil
 ├── favicon.svg         Icono de pestaña
 ├── og-image.png        Imagen para redes sociales
-└── QR.png              Código QR de acceso
+├── QR.png              Código QR de acceso
+└── convertir-og.html   Generador de imágenes con QR
 ```
 
 ## 🎨 Identidad visual

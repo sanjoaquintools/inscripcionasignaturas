@@ -41,9 +41,9 @@
             ctx.fillStyle = '#FFFFFF'; ctx.font = '800 72px system-ui'; ctx.textBaseline = 'top'; ctx.textAlign = 'left';
             ctx.fillText('Inscripcion de Asignaturas', 120, 280);
             ctx.fillStyle = 'rgba(255,255,255,0.6)'; ctx.font = '400 38px system-ui';
-            ctx.fillText('Duoc UC - Sede San Joaquin', 120, 375);
+            ctx.fillText('Sede San Joaquin', 120, 375);
             ctx.fillStyle = 'rgba(255,255,255,0.4)'; ctx.font = '400 26px system-ui';
-            var links = ['->  Opciones horarias 2026 - 2','->  Descarga tu horario aqui','->  Mallas Curriculares','->  Inscribe tus asignaturas aqui','->  Sitio Web DuocUC'];
+            var links = ['->  Opciones horarias 2026 - 2','->  Descarga tu horario aqui','->  Mallas Curriculares','->  Inscribe tus asignaturas aqui','->  Sitio Web'];
             for (var i = 0; i < links.length; i++) { ctx.fillText(links[i], 140, 460 + i * 44); }
             ctx.fillStyle = '#FFB800'; ctx.font = '600 22px system-ui';
             ctx.fillText('sanjoaquintools.github.io/inscripcionasignaturas', 120, 720);
@@ -56,7 +56,7 @@
             ctx.textAlign = 'left';
             ctx.fillStyle = '#FFB800'; ctx.fillRect(0, H - 16, W, 16);
             ctx.fillStyle = 'rgba(255,255,255,0.3)'; ctx.font = '400 16px system-ui';
-            ctx.fillText('Duoc UC - Sede San Joaquin - Inscripcion de Asignaturas - 2026', 120, H - 50);
+            ctx.fillText('Sede San Joaquin - Inscripcion de Asignaturas - 2026', 120, H - 50);
             document.getElementById('status').textContent = 'Imagen lista para descargar';
         }
         function roundRect(ctx, x, y, w, h, r) {
@@ -77,9 +77,9 @@
             c.fillStyle = '#FFB800'; c.fillRect(80, 150, 50, 4);
             c.fillStyle = '#FFFFFF'; c.font = '800 48px system-ui'; c.textBaseline = 'top'; c.textAlign = 'left';
             c.fillText('Inscripcion de Asignaturas', 80, 175);
-            c.fillStyle = 'rgba(255,255,255,0.6)'; c.font = '400 28px system-ui'; c.fillText('Duoc UC - Sede San Joaquin', 80, 240);
+            c.fillStyle = 'rgba(255,255,255,0.6)'; c.font = '400 28px system-ui'; c.fillText('Sede San Joaquin', 80, 240);
             c.fillStyle = 'rgba(255,255,255,0.4)'; c.font = '400 18px system-ui';
-            c.fillText('Horarios  -  Mallas  -  Inscripcion  -  DuocUC', 80, 300);
+            c.fillText('Horarios  -  Mallas  -  Inscripcion  -  Sitio Web', 80, 300);
             c.fillStyle = '#FFB800'; c.font = '600 16px system-ui';
             c.fillText('sanjoaquintools.github.io/inscripcionasignaturas', 80, 360);
             var qS = 240, qX = W - qS - 100, qY = (H - qS) / 2 - 20;
@@ -89,7 +89,7 @@
             c.fillText('Escanea para acceder', qX + qS/2, qY + qS + 25); c.textAlign = 'left';
             c.fillStyle = '#FFB800'; c.fillRect(0, H - 14, W, 14);
             c.fillStyle = 'rgba(255,255,255,0.3)'; c.font = '400 14px system-ui';
-            c.fillText('Duoc UC - Sede San Joaquin - Inscripcion de Asignaturas', 80, H - 40);
+            c.fillText('Sede San Joaquin - Inscripcion de Asignaturas', 80, H - 40);
             var a = document.createElement('a'); a.download = 'og-image.png'; a.href = ogC.toDataURL('image/png'); a.click();
         }
     </script>

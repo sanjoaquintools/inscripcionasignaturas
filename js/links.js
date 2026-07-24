@@ -9,7 +9,8 @@
  *
  * Iconos disponibles:
  * instagram, facebook, youtube, linkedin, tiktok,
- * x, whatsapp, email, web, github
+ * x, whatsapp, email, web, github,
+ * horario, descarga, malla, inscripcion, carpeta
  *
  * Tipos de enlace:
  * - (sin type): Enlace normal, abre en nueva pestaña
@@ -27,17 +28,22 @@ var LINKS_CONFIG = [
   {
     title: "Opciones horarias 2026 - 2",
     url: "https://drive.google.com/drive/folders/1O92TBFfV6MF_jo55GvEIuVQdwPfsfVUY",
-    icon: "web",
+    icon: "horario",
   },
   {
     title: "Descarga tu horario aquí",
     url: "https://portalinsc.duoc.cl/webdynpro/resources/duoc.com.student/sicol/StudentSicol?inportal=xi#",
-    icon: "web",
+    icon: "descarga",
   },
   {
     title: "Mallas Curriculares",
     url: "https://drive.google.com/drive/folders/1g2s0PJVOc955NFEXekVegn7PzNGSItVn?usp=sharing",
-    icon: "web",
+    icon: "malla",
+  },
+  {
+    title: "Inscribe tus asignaturas aquí",
+    url: "https://inscripciones.duoc.cl/IA/",
+    icon: "inscripcion",
   },
   {
     title: "Sitio Web DuocUC",

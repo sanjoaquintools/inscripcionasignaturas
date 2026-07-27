@@ -27,7 +27,7 @@
 var LINKS_CONFIG = [
   {
     title: "Opciones horarias 2026 - 2",
-    url: "https://drive.google.com/drive/folders/1O92TBFfV6MF_jo55GvEIuVQdwPfsfVUY",
+    url: "https://drive.google.com/drive/folders/1N2UPRaWYoeZQQeL0ce3jGmNrsc1MreK2?usp=sharing",
     icon: "horario",
   },
   {
@@ -37,7 +37,7 @@ var LINKS_CONFIG = [
   },
   {
     title: "Mallas Curriculares",
-    url: "https://drive.google.com/drive/folders/1g2s0PJVOc955NFEXekVegn7PzNGSItVn?usp=sharing",
+    url: "https://drive.google.com/drive/folders/1ESqfbwx3GmrCa5SFlVy6ocOcTqhJh2No?usp=sharing",
     icon: "malla",
   },
   {

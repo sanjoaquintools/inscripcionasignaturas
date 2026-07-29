@@ -32,7 +32,7 @@ var LINKS_CONFIG = [
   },
   {
     title: "Descarga tu horario aquí",
-    url: "https://portalinsc.duoc.cl/webdynpro/resources/duoc.com.student/sicol/StudentSicol?inportal=xi#",
+    url: "https://portalinsc.duoc.cl/webdynpro/resources/duoc.com/horario/PrintSchedule",
     icon: "descarga",
   },
   {
